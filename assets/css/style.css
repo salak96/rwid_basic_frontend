@@ -1,0 +1,157 @@
+/* CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Navigation (Navbar) */
+nav {
+  background-color: #333;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+nav a:hover {
+  color: #ff0000;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  background-image: url('/assets/img/1.jpg');
+  background-size: cover;
+  background-position: center center;
+  height: 500px;
+  color: white;
+  text-align: center;
+  padding: 100px;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(159, 159, 159, 0.5);
+  box-shadow: 0 0 20px rgba(17, 8, 8, 0.5);
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Button */
+.button {
+  background-color: rgb(20, 117, 31);
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #f40e0e;
+}
+
+.text {
+  text-align: center;
+  color: #000000;
+  white-space: nowrap;
+  padding: 15px;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1; /* Ensure the text is above the pseudo-element */
+}
+
+/* Images */
+.footer {
+  background-color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+}
+
+.shadow {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  background-color: #f3f3f3;
+  display: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 50px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 50px;
+  }
+  .text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    font-size: 12px;
+    padding: 50px;
+  }
+  .text h1{
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+  }
+}
